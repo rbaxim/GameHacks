@@ -18,7 +18,7 @@ function main(Delay) {
 
     // Buildings
     Game.priceIncrease = 1;
-    for (var i = 0, i < Objects.length, i++){
+    for (var i = 0; i < Objects.length; i++){
       Game.Objects[Objects[i]].amount += 5000;
     }
     var randomBuildingId = Math.floor(Math.random() * 20);
