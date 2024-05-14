@@ -1,4 +1,5 @@
 function main(Delay) {
+  Objects = ["Cursor", "Grandma", "Farm", "Mine", "Factory", "Bank", "Temple", "Wizard tower", "Shipment", "Alchemy lab", "Portal", "Time machine", "Antimatter condesnser", "Prism", "Chancemaker", "Fractal engine", "Javascript console", "Idleverse", "Cortex baker", "You"]
   setInterval(function() {
     //Golden Cookies
     Game.shimmers.forEach(function(shimmer) {
@@ -15,10 +16,11 @@ function main(Delay) {
       Game.wrinklers[i].type = 1; 
     }
 
-    // Cost becomes normal
+    // Buildings
     Game.priceIncrease = 1;
-
-    // Upgrade Buildings
+    for (var i = 0, i < Objects.length, i++){
+      Game.Objects[Objects[i]].amount += 5000;
+    }
     var randomBuildingId = Math.floor(Math.random() * 20);
     Game.ObjectsById[randomBuildingId].level += 1000;
     Game.recalculateGains = 1;
