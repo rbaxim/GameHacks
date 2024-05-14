@@ -1,4 +1,4 @@
-function main(Delay) {
+function main(Delay, LaggyDelay) {
   Objects = ["Cursor", "Grandma", "Farm", "Mine", "Factory", "Bank", "Temple", "Wizard tower", "Shipment", "Alchemy lab", "Portal", "Time machine", "Antimatter condesnser", "Prism", "Chancemaker", "Fractal engine", "Javascript console", "Idleverse", "Cortex baker", "You"]
   setInterval(function() {
     //Golden Cookies
@@ -18,15 +18,21 @@ function main(Delay) {
 
     // Buildings
     Game.priceIncrease = 1;
-    for (var i = 0; i < Objects.length; i++){
-      Game.Objects[Objects[i]].amount += 5000;
-    }
     var randomBuildingId = Math.floor(Math.random() * 20);
     Game.ObjectsById[randomBuildingId].level += 1000;
     Game.recalculateGains = 1;
       
   }, Delay);
-  
+  // Laggy Features
+  if (LaggyDelay > 5000){
+    setInterval(function() {
+      for (var i = 0; i < Objects.length; i++){
+        Game.Objects[Objects[i]].amount += 5000;
+      }
+    } LaggyDelay);
+  } else {
+    console.error("Too slow for laggy features")
+  }
   setInterval(function() {
     // Pop Wrinkler
     Game.PopRandomWrinkler();
