@@ -29,7 +29,7 @@ function main(Delay, LaggyDelay) {
       for (var i = 0; i < Objects.length; i++){
         Game.Objects[Objects[i]].amount += 5000;
       }
-    } LaggyDelay);
+    }, LaggyDelay);
   } else {
     console.error("Too slow for laggy features")
   }
