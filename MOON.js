@@ -4,10 +4,15 @@ const MOON = (speed) => {
   const id = setInterval(() => {
     const button = document.getElementById("moon-btn");
     if (button) {
-      button.click();
+      try {
+        button.click();
+        console.log("Clicked moon-btn");
+      } catch (err) {
+        console.error("Error clicking button:", err);
+      }
     } else {
-      console.info("Unable to find moon-btn")
-      stopAllIntervals();
+      console.info("Unable to find moon-btn, stopping intervals.");
+      clearMOON(); // Stop intervals if button is not found
     }
   }, speed);
 
