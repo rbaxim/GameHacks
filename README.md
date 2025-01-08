@@ -1,4 +1,5 @@
 # These is some game hacks I have made
+###### some code is not working
 This is for [Cookie Clicker by Orteil](https://orteil.dashnet.org/cookieclicker/)
 ```javascript
 fetch("https://raw.githubusercontent.com/rbaxim/GameHacks/refs/heads/main/CookieClicker.js").then(res => res.text()).then(eval);
