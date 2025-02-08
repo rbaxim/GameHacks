@@ -14,11 +14,11 @@
         "Game.ClickCookie(); was found on a stolen Cookie Clicker Computer"
     ];
 
-    if (typeof Game !== 'undefined' && Game.customTickers) {
-        Game.customTickers.push(customTickers);
-    } else {
-        console.error("Game or Game.customTickers is not defined.");
-    }
+    // if (typeof Game !== 'undefined' && Game.customTickers) {
+    //     Game.customTickers.push(customTickers);
+    // } else {
+    //     console.error("Game or Game.customTickers is not defined.");
+    // }
 
     setInterval(function() {
         // Golden Cookies
